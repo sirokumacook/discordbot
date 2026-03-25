@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 
 # .envファイルから環境変数（トークンやキー）を読み込む
 load_dotenv()
-DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
-GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+DISCORD_TOKEN = os.getenv('sRdPZyvC-o3p-RL-uICF8zBB_sgkM-tl')
+GEMINI_API_KEY = os.getenv('AIzaSyDUGjDmJuE86IPh14yX3Lqj5tKdAJwdP6k')
 
 # Gemini APIの設定（軽快に動くFlashモデルを指定しています）
 genai.configure(api_key=GEMINI_API_KEY)
