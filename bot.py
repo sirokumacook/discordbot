@@ -3,10 +3,13 @@ import os
 import google.generativeai as genai
 from dotenv import load_dotenv
 
+# ダミーWebサーバーを起動するためのファイルをインポート
+from keep_alive import keep_alive
+
 # .envファイルから環境変数（トークンやキー）を読み込む
 load_dotenv()
 DISCORD_TOKEN = os.getenv('sRdPZyvC-o3p-RL-uICF8zBB_sgkM-tl')
-GEMINI_API_KEY = os.getenv('AIzaSyDUGjDmJuE86IPh14yX3Lqj5tKdAJwdP6k')
+GEMINI_API_KEY = os.getenv('AIzaSyBVP0VZNYFDCr8ok5vBhUlF34EwbfBSAww')
 
 # Gemini APIの設定（軽快に動くFlashモデルを指定しています）
 genai.configure(api_key=GEMINI_API_KEY)
@@ -48,6 +51,9 @@ async def on_message(message):
             except Exception as e:
                 # 何かエラーが起きた時の処理
                 await message.reply(f"すみません、エラーが発生しました: {e}")
+
+# RenderのWeb Serviceで起動し続けるためのダミーサーバーを実行
+keep_alive()
 
 # ボットを起動する
 client.run(DISCORD_TOKEN)
