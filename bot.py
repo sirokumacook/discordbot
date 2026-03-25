@@ -8,7 +8,7 @@ from keep_alive import keep_alive
 
 # .envファイルから環境変数（トークンやキー）を読み込む
 load_dotenv()
-DISCORD_TOKEN = os.getenv('sRdPZyvC-o3p-RL-uICF8zBB_sgkM-tl')
+DISCORD_TOKEN = os.getenv('MTQ4NjIzNzUxODAyOTY1MTk5MA.GAvJO7.zqD_897BsjvepSnhn5txVSCPNAbDKzn4-crgJs')
 GEMINI_API_KEY = os.getenv('AIzaSyBVP0VZNYFDCr8ok5vBhUlF34EwbfBSAww')
 
 # Gemini APIの設定（軽快に動くFlashモデルを指定しています）
